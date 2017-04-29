@@ -1,6 +1,7 @@
 - [x] Define docker files
 - [x] Configure Hapi
 - [x] Configure eslint
+- [x] Configure logger
 - [ ] Configure joi & swagger
 - [ ] Configure sequelize
 - [ ] Configure test

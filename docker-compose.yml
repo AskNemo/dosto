@@ -18,7 +18,7 @@ services:
       - postgresql
     depends_on:
       - postgresql
-    command: watchexec -e js -r yarn run start
+    command: watchexec -e js -r yarn run start | ./node_modules/.bin/bunyan
     ports:
       - "2002:2002"
   test:

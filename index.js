@@ -1,4 +1,6 @@
 const Hapi = require('hapi');
+const logger = require('./src/lib/logger');
+const routes = require('./src/routes');
 
 const server = new Hapi.Server();
 
@@ -7,15 +9,19 @@ server.connection({
   port: process.env.PORT
 });
 
-server.route({
-  method: 'GET',
-  path: '/hello',
-  handler: (request, reply) => reply('hello world'),
+routes.forEach(route => {
+  server.route(route);
+});
+
+server.register(logger, (err) => {
+  if (err) throw err;
 });
 
 server.start((err) => {
   if (err) {
     throw err;
   }
-  console.log('Server running at:', server.info.uri);
+  server.log('info', `Server running at: ${server.info.uri}`);
 });
+
+module.exports = server;
