@@ -4,7 +4,7 @@ const server = new Hapi.Server();
 
 server.connection({
   host: '0.0.0.0',
-  port: process.env.PORT,
+  port: process.env.PORT
 });
 
 server.route({
