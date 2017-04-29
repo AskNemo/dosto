@@ -1,0 +1,6 @@
+- [x] Define docker files
+- [ ] Configure eslint
+- [ ] Configure sequelize
+- [ ] Configure test
+- [ ] Add JSON Schema validation using ajv
+- [ ] Use NATS for async

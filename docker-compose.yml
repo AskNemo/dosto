@@ -1,0 +1,32 @@
+version: '2'
+services:
+  postgresql:
+    image: postgres:9.5
+    command: postgres
+    volumes:
+      - ./migrations:/docker-entrypoint-initdb.d
+    ports:
+      - "6666:5432"
+  web:
+    environment:
+      - PORT=2002
+    volumes:
+      - .:/usr/src/app
+    build:
+      context: .
+    links:
+      - postgresql
+    depends_on:
+      - postgresql
+    command: watchexec -e js -r yarn run start
+    ports:
+      - "2002:2002"
+  test:
+    volumes:
+      - .:/usr/src/app
+    build:
+      context: .
+    links:
+      - postgresql
+    depends_on:
+      - postgresql
