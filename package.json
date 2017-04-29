@@ -7,7 +7,7 @@
   "author": "Anoop Varghese",
   "license": "Private",
   "dependencies": {
-    "express": "^4.15.2"
+    "hapi": "^16.1.1"
   },
   "scripts": {
     "start": "node index.js"

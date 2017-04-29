@@ -1,6 +1,7 @@
 - [x] Define docker files
+- [x] Configure Hapi
 - [ ] Configure eslint
+- [ ] Configure joi & swagger
 - [ ] Configure sequelize
 - [ ] Configure test
-- [ ] Add JSON Schema validation using ajv
 - [ ] Use NATS for async

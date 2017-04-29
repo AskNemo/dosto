@@ -1,9 +1,21 @@
-const express = require('express');
+const Hapi = require('hapi');
 
-const app = express();
+const server = new Hapi.Server();
 
-const server = app.listen(process.env.PORT, () => {
-  console.info(`Dosto listening on ${process.env.PORT}`);
+server.connection({
+  host: '0.0.0.0',
+  port: process.env.PORT,
 });
 
-module.exports = server;
+server.route({
+  method: 'GET',
+  path: '/hello',
+  handler: (request, reply) => reply('hello world'),
+});
+
+server.start((err) => {
+  if (err) {
+    throw err;
+  }
+  console.log('Server running at:', server.info.uri);
+});
