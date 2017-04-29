@@ -1,0 +1,9 @@
+{
+  "name": "dosto",
+  "version": "1.0.0",
+  "description": "Dosto backend",
+  "main": "index.js",
+  "repository": "git@github.com:AskNemo/dosto.git",
+  "author": "Anoop Varghese",
+  "license": "Private"
+}
