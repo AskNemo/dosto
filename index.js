@@ -1,5 +1,8 @@
 const Hapi = require('hapi');
-const logger = require('./src/lib/logger');
+const logger = require('./src/plugins/logger');
+const vision = require('./src/plugins/vision');
+const inert = require('./src/plugins/inert');
+const swagger = require('./src/plugins/swagger');
 const routes = require('./src/routes');
 
 const server = new Hapi.Server();
@@ -13,7 +16,13 @@ routes.forEach(route => {
   server.route(route);
 });
 
-server.register(logger, (err) => {
+
+server.register([
+  logger,
+  inert,
+  vision,
+  swagger
+], (err) => {
   if (err) throw err;
 });
 

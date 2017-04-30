@@ -1,6 +1,5 @@
 const hello = (request, reply) => {
-  request.log.info('Receive request', request);
-  reply('hello world');
+  reply(`hello ${request.params.name}`);
 };
 
 module.exports = hello;
