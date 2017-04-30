@@ -10,6 +10,8 @@ services:
   web:
     environment:
       - PORT=2002
+      - DATABASE_URI=postgres://dosto@postgresql/dosto_development
+      - DATABASE_INITIALIZATION_URI=postgres://postgres@postgresql/template1
     volumes:
       - .:/usr/src/app
     build:
@@ -30,3 +32,5 @@ services:
       - postgresql
     depends_on:
       - postgresql
+    environment:
+      - DATABASE_URI=postgres://dosto@postgresql/dosto_testing
