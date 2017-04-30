@@ -2,7 +2,7 @@
 - [x] Configure Hapi
 - [x] Configure eslint
 - [x] Configure logger
-- [ ] Configure joi & swagger
+- [x] Configure joi & swagger
 - [ ] Configure sequelize
 - [ ] Configure test
 - [ ] Use NATS for async
