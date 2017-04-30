@@ -23,7 +23,8 @@
     "lint": "./node_modules/.bin/eslint src",
     "db:migrate": "./node_modules/.bin/sequelize --config src/config/db.js db:migrate",
     "db:migration": "./node_modules/.bin/sequelize migration:create --config src/config/db.js",
-    "db:setup": "./src/bin/initialize && yarn run db:migrate"
+    "db:setup": "./src/bin/initialize && yarn run db:migrate",
+    "db:reset": "./src/bin/reset"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
