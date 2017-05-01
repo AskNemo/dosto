@@ -24,14 +24,20 @@
     "db:migrate": "./node_modules/.bin/sequelize --config src/config/db.js db:migrate",
     "db:migration": "./node_modules/.bin/sequelize migration:create --config src/config/db.js",
     "db:setup": "./src/bin/initialize && yarn run db:migrate",
-    "db:reset": "./src/bin/reset"
+    "db:reset": "./src/bin/reset",
+    "spec": "./node_modules/.bin/ava ava test --tap | tap-nyan",
+    "test": "nyc yarn spec"
   },
   "devDependencies": {
+    "ava": "^0.19.1",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "nyc": "^10.3.0",
+    "sinon": "^2.1.0",
+    "tap-nyan": "^1.1.0"
   }
 }
