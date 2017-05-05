@@ -34,3 +34,4 @@ services:
       - postgresql
     environment:
       - DATABASE_URI=postgres://dosto@postgresql/dosto_testing
+      - DATABASE_INITIALIZATION_URI=postgres://postgres@postgresql/template1
