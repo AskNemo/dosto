@@ -10,8 +10,3 @@ before_install:
 script:
   - docker-compose run test yarn run build:test
   - docker-compose run yarn run lint
-
-branches:
-  only:
-    - master
-    - develop
