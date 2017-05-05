@@ -26,7 +26,8 @@
     "db:setup": "./src/bin/initialize && yarn run db:migrate",
     "db:reset": "./src/bin/reset",
     "spec": "./node_modules/.bin/ava ava test --tap | tap-nyan",
-    "test": "nyc yarn spec"
+    "test": "nyc yarn spec",
+    "build:test": "yarn run db:setup && yarn run test"
   },
   "devDependencies": {
     "ava": "^0.19.1",
