@@ -14,7 +14,5 @@ before_install:
 
 script:
   - ls
-  - docker-compose
-  - docker-compose build test
-  - docker-compose run test yarn run build:test
-  - docker-compose run yarn run lint
+  - docker-compose -f docker-compose.yml run test yarn run build:test
+  - docker-compose -f docker-compose.yml run yarn run lint
