@@ -8,9 +8,9 @@ RUN mkdir -p /opt/watchexec \
     | tar zx -C /opt/watchexec \
     && ln -s /opt/watchexec/watchexec-1.8.0-x86_64-unknown-linux-gnu/watchexec /usr/local/bin/watchexec
 WORKDIR /usr/src/app
-ENV NODE_PATH=/usr/src/app/node_modules
 COPY ./package.json /usr/src/app
 COPY ./yarn.lock /usr/src/app
 RUN yarn
 
 ADD . /usr/src/app
+COPY node_modules /user/src/app
