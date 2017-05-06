@@ -13,6 +13,5 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 script:
-  - docker-compose run test bash
   - docker-compose run test ls
   - docker-compose run test ls ./node_modules/.bin/
