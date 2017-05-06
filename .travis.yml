@@ -14,5 +14,5 @@ before_install:
 
 script:
   - docker-compose run test yarn --force
-  - docker-compose run test yarn ls
+  - docker-compose run test yarn run build:test
   - docker-compose run test yarn run lint
