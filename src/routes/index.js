@@ -1,5 +1,10 @@
 const hello = require('./hello');
+const genre = require('./genre');
 
-const routes = [...[], hello];
+const routes = [
+  ...[],
+  hello,
+  genre
+];
 
 module.exports = routes;
