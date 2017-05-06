@@ -3,6 +3,6 @@
 - [x] Configure eslint
 - [x] Configure logger
 - [x] Configure joi & swagger
-- [ ] Configure sequelize
-- [ ] Configure test
+- [x] Configure sequelize
+- [x] Configure test
 - [ ] Use NATS for async
