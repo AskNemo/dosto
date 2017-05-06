@@ -13,4 +13,4 @@ COPY ./yarn.lock /usr/src/app
 RUN yarn
 
 ADD . /usr/src/app
-COPY node_modules /user/src/app
+

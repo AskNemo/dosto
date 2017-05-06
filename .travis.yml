@@ -13,5 +13,6 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 script:
-  - docker-compose run test ls
-  - docker-compose run test ls ./node_modules/.bin/
+  - docker-compose run test yarn --force
+  - docker-compose run test yarn ls
+  - docker-compose run test yarn run lint
